@@ -1,0 +1,519 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fffaf8;
+    color: #503b42;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background: #fffaf8;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #f2e1e5;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    color: #a45d73;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #d58ba0;
+}
+
+.logo small {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 9px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #654e56;
+    font-size: 13px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #c77e95;
+}
+
+.cart-icon {
+    border: none;
+    background: transparent;
+    color: #a45d73;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: #a45d73;
+}
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 65px 10%;
+    gap: 50px;
+    background: #f9e9ed;
+}
+
+.hero-text {
+    max-width: 480px;
+}
+
+.subtitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #b36d83;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    color: #67414f;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.hero-text > p:not(.subtitle) {
+    font-size: 13px;
+    line-height: 2;
+    color: #846c74;
+    margin: 20px 0 30px;
+}
+
+.main-button {
+    display: inline-block;
+    background: #c77e95;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: .3s;
+    border: none;
+    cursor: pointer;
+}
+
+.main-button:hover {
+    background: #98566c;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    width: 47%;
+    height: 390px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 180px 180px 10px 10px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 85px 10%;
+}
+
+.welcome h2,
+.section-title h2,
+.about h2,
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 18px;
+}
+
+.welcome h2 span,
+.section-title h2 span,
+.about h2 span,
+.contact h2 span {
+    color: #c77e95;
+}
+
+.welcome > p:last-child {
+    max-width: 600px;
+    margin: auto;
+    color: #8b777e;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.shop {
+    background: #fff;
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.section-title > p:last-child {
+    color: #927d84;
+    font-size: 12px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 35px 0;
+}
+
+.filter-buttons button {
+    border: 1px solid #e6c5ce;
+    background: white;
+    color: #a45d73;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover {
+    background: #c77e95;
+    color: white;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 20px;
+}
+
+.product-card {
+    background: white;
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    background: #f8e9ec;
+}
+
+.product-info {
+    padding: 15px 5px;
+}
+
+.product-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.product-info p {
+    color: #96828a;
+    font-size: 11px;
+    line-height: 1.7;
+    min-height: 38px;
+}
+
+.product-info h4 {
+    color: #a45d73;
+    margin: 12px 0;
+    font-size: 13px;
+}
+
+.add-cart {
+    border: 1px solid #d49aaa;
+    background: white;
+    color: #a45d73;
+    padding: 9px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.add-cart:hover {
+    background: #c77e95;
+    color: white;
+}
+
+.quote {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f6e5e9;
+}
+
+.quote h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.quote h2 span {
+    color: #b36d83;
+    font-style: italic;
+}
+
+.quote p {
+    font-size: 12px;
+    color: #896e77;
+    margin-top: 20px;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 90px 10%;
+}
+
+.about-image {
+    width: 50%;
+    height: 370px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 100px 5px 5px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text > p:not(.subtitle) {
+    font-size: 13px;
+    line-height: 2;
+    color: #8b777e;
+    margin: 20px 0 30px;
+}
+
+.contact {
+    background: #fff0f2;
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.contact > p:not(.subtitle) {
+    color: #927d84;
+    font-size: 13px;
+    margin: 15px 0 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #503b42;
+    color: #fff0f2;
+}
+
+footer h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 11px;
+    margin: 8px;
+    color: #e8cbd3;
+}
+
+/* CART */
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 380px;
+    max-width: 90%;
+    height: 100%;
+    background: #fffaf8;
+    z-index: 300;
+    padding: 30px;
+    transition: .4s;
+    overflow-y: auto;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.close-cart {
+    float: right;
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: #a45d73;
+    cursor: pointer;
+}
+
+.cart-panel h2 {
+    font-family: 'Playfair Display', serif;
+    margin: 30px 0;
+}
+
+#cart-items p {
+    font-size: 12px;
+    color: #927d84;
+    margin: 15px 0;
+}
+
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #efdce2;
+    font-size: 12px;
+}
+
+.cart-row button {
+    border: none;
+    background: none;
+    color: #b36d83;
+    cursor: pointer;
+}
+
+.cart-panel h3 {
+    font-size: 15px;
+    margin: 25px 0;
+}
+
+.checkout {
+    width: 100%;
+    border: none;
+    background: #c77e95;
+    color: white;
+    padding: 14px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #0007;
+    z-index: 200;
+}
+
+.overlay.show {
+    display: block;
+}
+
+@media(max-width: 900px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+}
+
+@media(max-width: 600px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fffaf8;
+        padding: 25px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 50px 7%;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 280px;
+    }
+
+    .welcome h2,
+    .section-title h2,
+    .about h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 12px;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 60px 7%;
+        gap: 30px;
+    }
+
+    .about-image {
+        width: 100%;
+        height: 270px;
+    }
+
+    .quote h2 {
+        font-size: 27px;
+    }
+}

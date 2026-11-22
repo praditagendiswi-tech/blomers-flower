@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloome Florist</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <a href="#home" class="logo">
+        <span>✿</span> Bloome
+        <small>FLORIST</small>
+    </a>
+
+    <nav id="navbar">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="cart-icon" onclick="toggleCart()">
+        ♡ Cart (<span id="cart-count">0</span>)
+    </button>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-text">
+        <p class="subtitle">FRESH FLOWERS, BRIGHTER DAYS</p>
+        <h1>Bloome Florist</h1>
+        <h2>Flowers make every moment beautiful.</h2>
+        <p>
+            More than just flowers, it's a heartfelt message.
+            Find your perfect blooms and share happiness
+            with someone special.
+        </p>
+        <a href="#shop" class="main-button">Shop Now →</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=1000&q=85"
+             alt="Pink flower bouquet">
+    </div>
+</section>
+
+<section class="welcome">
+    <p class="subtitle">WELCOME TO BLOOME</p>
+    <h2>A Little Flower, <span>A Lot of Happiness.</span></h2>
+    <p>
+        Beautiful flowers for birthdays, celebrations,
+        special occasions, or simply to brighten someone's day.
+    </p>
+</section>
+
+<section class="shop" id="shop">
+    <div class="section-title">
+        <p class="subtitle">OUR COLLECTION</p>
+        <h2>Find Your <span>Favorite Blooms</span></h2>
+        <p>Handpicked flowers, arranged with love.</p>
+    </div>
+
+    <div class="filter-buttons">
+        <button class="active" onclick="filterProducts('all', this)">All Flowers</button>
+        <button onclick="filterProducts('single', this)">Single Flowers</button>
+        <button onclick="filterProducts('bouquet', this)">Bouquets</button>
+    </div>
+
+    <div class="product-container" id="product-container">
+        <!-- Products will appear here -->
+    </div>
+</section>
+
+<section class="quote">
+    <h2>"Where words fall short,</h2>
+    <h2><span>flowers speak."</span></h2>
+    <p>Make every moment bloom with Bloome Florist.</p>
+</section>
+
+<section class="about" id="about">
+    <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=900&q=85"
+             alt="Flower arrangement">
+    </div>
+
+    <div class="about-text">
+        <p class="subtitle">ABOUT BLOOME</p>
+        <h2>Beautiful Flowers, <span>Meaningful Moments.</span></h2>
+        <p>
+            Bloome Florist is a flower shop that offers
+            beautiful fresh flowers and lovely bouquets.
+            We believe that every flower has its own meaning
+            and can express feelings without saying a word.
+        </p>
+        <a href="#contact" class="main-button">Contact Us →</a>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <p class="subtitle">WE WOULD LOVE TO HEAR FROM YOU</p>
+    <h2>Let's Make Someone <span>Smile!</span></h2>
+    <p>Have a question or want to order flowers?</p>
+    <a href="https://wa.me/6281285358741" class="main-button">Chat With Us →</a>
+</section>
+
+<footer>
+    <h2>✿ Bloome Florist</h2>
+    <p>Fresh Flowers, Brighter Days.</p>
+    <p>© 2026 Bloome Florist. All Rights Reserved.</p>
+</footer>
+
+<!-- SHOPPING CART -->
+<div class="cart-panel" id="cart-panel">
+    <button class="close-cart" onclick="toggleCart()">×</button>
+    <h2>Your Shopping Cart</h2>
+    <div id="cart-items">
+        <p>Your cart is empty ♡</p>
+    </div>
+    <h3>Total: <span id="cart-total">Rp0</span></h3>
+    <button class="checkout" onclick="checkout()">Checkout via WhatsApp</button>
+</div>
+
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
