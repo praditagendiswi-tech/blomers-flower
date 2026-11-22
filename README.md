@@ -1,2 +1,2 @@
 # bloome-florist
-bloome florist website
+bloomers flower website
